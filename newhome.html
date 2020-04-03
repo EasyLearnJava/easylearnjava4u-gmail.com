@@ -1,0 +1,38 @@
+<html>
+<H1> Hello World </h1>
+<table style="width:100%">
+  <tr>
+    <td colspan="2"><div id="lwcDemo"></div></td>
+  
+    <td colspan="1">  <div id="lightning"></div></td>
+  </tr>
+</table>
+  
+
+<script src="https://rnrcommunities-developer-edition.na85.force.com/Test/lightning/lightning.out.js"></script>
+<script>
+     $Lightning.use("c:lwcVfDemoApp", function() {
+        $Lightning.createComponent("c:lwcInVisualforceDemo", {objName : "Account" },
+              "lwcDemo",
+              function(cmp) {
+                console.log("LWC component was created");
+                // do some stuff
+              }
+          );
+        }
+      );
+</script>
+
+<script>
+     $Lightning.use("c:lwcVfDemoApp", function() {
+        $Lightning.createComponent("c:demoHelloWorldTXU", { },
+              "lightning",
+              function(cmp) {
+                console.log("LWC component was created");
+                // do some stuff
+              }
+          );
+        }
+      );
+</script>
+</html>
